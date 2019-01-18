@@ -16,28 +16,28 @@ import java.util.Queue;
 
 public class CollectionQueue {
     public static void main(String[] args){
-        Queue<String> waitingPet = new LinkedList<>();
+        Queue<String> waitingCamper = new LinkedList<>();
         
         //add new elements to Queue
-        waitingPet.add("Fluffy");
-        waitingPet.add("Spot");
-        waitingPet.add("Charlie");
-        waitingPet.add("Diesel");
-        waitingPet.add("Luna");
-        waitingPet.add("Walle");
+        waitingCamper.add("Anderson");
+        waitingCamper.add("Douglas");
+        waitingCamper.add("Brady");
+        waitingCamper.add("Johnson");
+        waitingCamper.add("Walker");
+        waitingCamper.add("Reynolds");
         
         //Print out waiting Queue
-        System.out.println("Waiting Pet List : "+ waitingPet);
+        System.out.println("Waiting Camper List : "+ waitingCamper);
         
         //Removing an element from the Queue using remove()
         //The remove() method throws NoSuchElementException if the Queue is empty
-        String petName = waitingPet.remove();
-        System.out.println("Removed from waitngPet : "+ petName + " | New waitingPet : " + waitingPet);
+        String camperName = waitingCamper.remove();
+        System.out.println("Removed from Waiting Camper list : "+ camperName + " | New Waiting Camper list : " + waitingCamper);
         
         //removing element from Queue using poll()
         //The poll() method is like remove() except it returns null if Queue is empty
-        petName = waitingPet.poll();
-        System.out.println("Removed from Waiting List : " + petName + " | New waiting List : " + waitingPet);
+        camperName = waitingCamper.poll();
+        System.out.println("Removed from Waiting List : " + camperName + " | New waiting List : " + waitingCamper);
     }
     
 }

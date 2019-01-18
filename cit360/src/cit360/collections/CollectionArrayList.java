@@ -21,20 +21,20 @@ List can contain duplicated and elements are ordered.*/
 public class CollectionArrayList {
      public static void main(String args[]) {
         
-        ArrayList<String> groomers = new ArrayList<>();
+        ArrayList<String> employees = new ArrayList<>();
         //add items to the ArrayList
-        groomers.add("Suzie");
-        groomers.add("Bob");
-        groomers.add("Anna");
-        groomers.add("Natalie");
-        groomers.add("Tiffany");
+        employees.add("Suzie");
+        employees.add("Bob");
+        employees.add("Anna");
+        employees.add("Natalie");
+        employees.add("Tiffany");
         
         //Print out ArrayList contents, and show size
-        System.out.println("The Gooming Team members are: " + groomers);
-        System.out.println("There are " + groomers.size()+" people in the Grooming team");
+        System.out.println("The Campground Team members are: " + employees);
+        System.out.println("There are " + employees.size()+" people in the Campground team");
         
        //Iterating through the list
-        Iterator<String> iterator = groomers.iterator();
+        Iterator<String> iterator = employees.iterator();
         while (iterator.hasNext()){
             System.out.println(iterator.next());
         }

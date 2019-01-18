@@ -17,23 +17,23 @@ import java.util.TreeSet;
 the insertion order of the elements. It sorts in ascending order and not thread-safe*/
 public class CollectionTree {
     public static void main(String[] args){
-        Set<String> groomers = new HashSet<>();
+        Set<String> employees = new HashSet<>();
         //Add items to list
-        groomers.add("Drew");
-        groomers.add("Suzie");
-        groomers.add("Corbin");
-        groomers.add("Bob");
-        groomers.add("Brennen");
-        groomers.add("Anna");
-        groomers.add("Natalie");
-        groomers.add("Tiffany");
-        groomers.add("Rylee");
+        employees.add("Drew");
+        employees.add("Suzie");
+        employees.add("Corbin");
+        employees.add("Bob");
+        employees.add("Brennen");
+        employees.add("Anna");
+        employees.add("Natalie");
+        employees.add("Tiffany");
+        employees.add("Rylee");
         
-        //Print Groomers list
-        System.out.println(groomers);
+        //Print Employee list
+        System.out.println(employees);
         
         //Create TreeList. This will alphabetically reorder list
-        Set<String> treeSet = new TreeSet(groomers);
+        Set<String> treeSet = new TreeSet(employees);
         
         //Print new Groomer list
         System.out.println(treeSet);

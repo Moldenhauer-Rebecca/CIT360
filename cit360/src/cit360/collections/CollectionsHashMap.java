@@ -17,28 +17,28 @@ a (key,Value) pair. To access a value you must know the key.*/
 public class CollectionsHashMap {
     public static void main(String[] args) {
         //Declare
-        HashMap<Integer, String> groomerStations = new HashMap<>();
+        HashMap<Integer, String> employeeStations = new HashMap<>();
         //add elements
-        groomerStations.put(3, "Suzie");
-        groomerStations.put(6, "Bob");
-        groomerStations.put(2, "Anna");
-        groomerStations.put(1, "Natalie");
-        groomerStations.put(5, "Tiffany");
+        employeeStations.put(3, "Suzie");
+        employeeStations.put(6, "Bob");
+        employeeStations.put(2, "Anna");
+        employeeStations.put(1, "Natalie");
+        employeeStations.put(5, "Tiffany");
         
-        System.out.println("Team Stations has "+ groomerStations.size()+" goomers working");
+        System.out.println("Team Stations has "+ employeeStations.size()+" employees working");
         
         //Removing element by key
-        groomerStations.remove(2);
-        System.out.println(groomerStations);
+        employeeStations.remove(2);
+        System.out.println(employeeStations);
         
         //Search for element by number
-        if(groomerStations.containsKey(1)){
-            System.out.println("Groomer Found");
+        if(employeeStations.containsKey(4)){
+            System.out.println("Employee Found");
         } else {
-            System.out.println("Groomer Off duty");
+            System.out.println("Employee Off duty");
         }
         //Remove all emements from HashMap
-        groomerStations.clear();
+        employeeStations.clear();
     }
     
 }

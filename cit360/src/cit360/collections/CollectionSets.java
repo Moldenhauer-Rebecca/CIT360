@@ -16,22 +16,22 @@ import java.util.Set;
 
 public class CollectionSets {
     public static void main(String[] args){
-        Set<String> groomers = new HashSet<>();
+        Set<String> employees = new HashSet<>();
         //Add itmes to list
-        groomers.add("Suzie");
-        groomers.add("Bob");
-        groomers.add("Anna");
-        groomers.add("Natalie");
-        groomers.add("Tiffany");
+        employees.add("Suzie");
+        employees.add("Bob");
+        employees.add("Anna");
+        employees.add("Natalie");
+        employees.add("Tiffany");
         
-//Add duplicate items to list
-        groomers.add("Suzie");
-        groomers.add("Bob");
-        groomers.add("Anna");
-        groomers.add("Natalie");
+        //Add duplicate items to list
+        employees.add("Suzie");
+        employees.add("Bob");
+        employees.add("Anna");
+        employees.add("Natalie");
         
         //Sets do not allow duplicates. Printing will remove the duplicates
-        System.out.println(groomers);
+        System.out.println(employees);
         
     }
     
