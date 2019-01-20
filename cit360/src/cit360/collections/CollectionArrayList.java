@@ -30,8 +30,8 @@ public class CollectionArrayList {
         employees.add("Tiffany");
         
         //Print out ArrayList contents, and show size
-        System.out.println("The Campground Team members are: " + employees);
-        System.out.println("There are " + employees.size()+" people in the Campground team");
+        System.out.println("The Campground employees are: " + employees);
+        System.out.println("There are " + employees.size()+" people on the Campground team");
         
        //Iterating through the list
         Iterator<String> iterator = employees.iterator();

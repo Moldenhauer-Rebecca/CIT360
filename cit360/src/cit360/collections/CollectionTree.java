@@ -13,7 +13,7 @@ import java.util.TreeSet;
  *
  * @author crmol
  */
-/* A TreeSet is a sorted collection. It stores unique elements an doesn't perserve
+/* A TreeSet is a sorted collection. It stores unique elements and doesn't perserve
 the insertion order of the elements. It sorts in ascending order and not thread-safe*/
 public class CollectionTree {
     public static void main(String[] args){
@@ -35,7 +35,7 @@ public class CollectionTree {
         //Create TreeList. This will alphabetically reorder list
         Set<String> treeSet = new TreeSet(employees);
         
-        //Print new Groomer list
+        //Print new Employee list
         System.out.println(treeSet);
     }
     

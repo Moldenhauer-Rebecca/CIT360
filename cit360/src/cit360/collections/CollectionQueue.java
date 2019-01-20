@@ -27,17 +27,17 @@ public class CollectionQueue {
         waitingCamper.add("Reynolds");
         
         //Print out waiting Queue
-        System.out.println("Waiting Camper List : "+ waitingCamper);
+        System.out.println("Camper waiting List : "+ waitingCamper);
         
         //Removing an element from the Queue using remove()
         //The remove() method throws NoSuchElementException if the Queue is empty
         String camperName = waitingCamper.remove();
-        System.out.println("Removed from Waiting Camper list : "+ camperName + " | New Waiting Camper list : " + waitingCamper);
+        System.out.println("Removed from Waiting Camper list : "+ camperName + " | New Camper waiting list : " + waitingCamper);
         
         //removing element from Queue using poll()
         //The poll() method is like remove() except it returns null if Queue is empty
         camperName = waitingCamper.poll();
-        System.out.println("Removed from Waiting List : " + camperName + " | New waiting List : " + waitingCamper);
+        System.out.println("Removed from Waiting List : " + camperName + " | New Camper waiting List : " + waitingCamper);
     }
     
 }
