@@ -5,42 +5,40 @@
  */
 package ThreadsExecRunnables;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 /**
  *
  * @author crmol
  */
-public class ThreadExp implements Runnable {
+public class ThreadExp {
     
-    private final String command;
-    private final int number;
-    
-    public ThreadExp(String s, int num){
-        this.command = s;
-        this.number=num;
-    }
-
-    @Override
-    public void run() {
-        int num2 = number * number;
+    public void runThreads() {
+        RunnableExp tasks = new RunnableExp();
+        tasks.setTaskData();
+        Runnable Task1 = tasks.getTask1();
+        Runnable Task2 = tasks.getTask2();
+        Runnable Task3 = tasks.getTask3();
         
-        System.out.println("Number " + number + " Squared = " + num2 + ". request = " + command);
-        processCommand();
-        System.out.println(Thread.currentThread().getName()+" End.");
-    }
-    
-    private void processCommand(){
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-    @Override 
-    public String toString(){
-        return this.command;
-    }
+        Thread simpleThread1 = new Thread(Task1);
+        simpleThread1.start();
+        Thread simpleThread2 = new Thread(Task2);
+        simpleThread2.start();
+        Thread simpleThread3 = new Thread(Task3);
+        simpleThread3.start();
+        
+        /*This allows for simple Thread1 to finish before moving on
+        Without this the thread moves on and the program continues and mixes
+        the executor results in the console.*/
+         try {
+             simpleThread1.join();
+         } catch (InterruptedException ex) {
+             Logger.getLogger(ThreadExp.class.getName()).log(Level.SEVERE, null, ex);
+         }
         
         
-    
+    }
+   
 }
-

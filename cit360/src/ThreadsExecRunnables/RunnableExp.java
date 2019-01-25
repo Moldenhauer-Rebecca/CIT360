@@ -9,39 +9,50 @@ package ThreadsExecRunnables;
  *
  * @author crmol
  */
-public class RunnableExp implements Runnable {
-    
-    private Thread t;
-    private final String tName;
-    
-    RunnableExp (String name){
-        tName = name;
-        System.out.println("Creating " + tName);
+public class RunnableExp {
+
+    private Runnable task1;
+    private Runnable task2;
+    private Runnable task3;
+
+    public void setTaskData() {
+        this.task1 = () -> {
+            String threadName = Thread.currentThread().getName();
+            System.out.println("Task 1 running on " + threadName);
+        };
+
+        this.task2 = () -> {
+            String threadName = Thread.currentThread().getName();
+            System.out.println("Task 2 running on " + threadName);
+        };
+
+        this.task3 = () -> {
+            String threadName = Thread.currentThread().getName();
+            System.out.println("Thread 3 running on " + threadName);
+        };
+        
     }
     
-    @Override
-    public void run(){
-        System.out.println("Running " + tName);
-        try {
-            for(int i = 4; i>0; i--){
-                System.out.println("Thread: " + tName + ", " + i);
-            try {
-                Thread.sleep(50);
-            } catch (InterruptedException e) {
-                System.out.println("Interrupted Thread");
-            }
-            }
-        }
-        finally {
-            System.out.println("Thread " + tName + " exiting");
-        }
+    public Runnable getTask1() {
+        return task1;
+    }
+
+    public Runnable getTask2() {
+        return task2;
+    }
+
+    public Runnable getTask3() {
+        return task3;
     }
     
-    public void start(){
-        System.out.println("Starting " + tName);
-        if (t == null){
-            t = new Thread(this, tName);
-            t.start();
-        }
-    }    
+    public Runnable createTask(String name, long waitTime) {
+        Runnable task;
+        task = () -> {
+            String threadName = Thread.currentThread().getName();
+            System.out.println("This is " + name + " running on " + threadName
+            + " with a wait time of " + waitTime);
+        };
+        return task;
+    }
 }
+
