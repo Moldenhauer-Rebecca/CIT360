@@ -30,9 +30,9 @@ public class RunnableExp {
             String threadName = Thread.currentThread().getName();
             System.out.println("Thread 3 running on " + threadName);
         };
-        
+
     }
-    
+
     public Runnable getTask1() {
         return task1;
     }
@@ -44,15 +44,14 @@ public class RunnableExp {
     public Runnable getTask3() {
         return task3;
     }
-    
+
     public Runnable createTask(String name, long waitTime) {
         Runnable task;
         task = () -> {
             String threadName = Thread.currentThread().getName();
             System.out.println("This is " + name + " running on " + threadName
-            + " with a wait time of " + waitTime);
+                    + " with a wait time of " + waitTime);
         };
         return task;
     }
 }
-
