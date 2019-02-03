@@ -9,11 +9,11 @@ package ACPExp;
  *
  * @author crmol
  */
-public class Multiply implements BalanceDue {
-    
-    public void execute(double balanceDue, double amount) {
-        double sum = balanceDue * amount;
-        System.out.println(sum);
+public class HandleCharges implements CamperInterface {
+
+    public double camperBalance(double balance, double amount) {
+        System.out.println("You have charged $" + amount + " to your account.");
+        return balance + amount;
     }
-    
+
 }

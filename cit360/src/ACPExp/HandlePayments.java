@@ -9,7 +9,12 @@ package ACPExp;
  *
  * @author crmol
  */
-public interface BalanceDue {
-    void execute(double balanceDue, double amount);
-    
+public class HandlePayments implements CamperInterface {
+
+    @Override
+    public double camperBalance(double balance, double amount) {
+        System.out.println("You paid $" + amount + ".");
+        return balance - amount;
+    }
+
 }

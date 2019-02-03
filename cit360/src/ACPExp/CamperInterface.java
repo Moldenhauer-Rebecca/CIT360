@@ -9,11 +9,8 @@ package ACPExp;
  *
  * @author crmol
  */
-public class AddToCart implements BalanceDue {
-    
-    public void execute(double balanceDue, double amount) {
-        double sum = balanceDue + amount;
-        System.out.println(sum);
-    } 
-    
+public interface CamperInterface {
+
+    double camperBalance(double balance, double amount);
+
 }
