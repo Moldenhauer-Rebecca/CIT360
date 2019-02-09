@@ -5,12 +5,13 @@
  */
 package ThreadsRunnableExecutors;
 
-public class RunnableExp implements Runnable {
+
+public class Task extends Thread {
 
     private Thread t;
     private String tName;
 
-    RunnableExp(String name) {
+    Task(String name) {
         tName = name;
         System.out.println("Creating " + tName);
 
@@ -23,7 +24,7 @@ public class RunnableExp implements Runnable {
             for (int i = 4; i > 0; i--) {
                 System.out.println("Thread: " + tName + ", " + i);
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(50);
                 } catch (InterruptedException e) {
                     System.out.println("Thread has been interrupted");
                 }
@@ -33,6 +34,7 @@ public class RunnableExp implements Runnable {
         }
     }
 
+    @Override
     public void start() {
         System.out.println("Starting " + tName);
         if (t == null) {
@@ -40,5 +42,4 @@ public class RunnableExp implements Runnable {
             t.start();
         }
     }
-
 }
