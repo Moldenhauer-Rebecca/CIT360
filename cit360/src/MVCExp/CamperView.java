@@ -5,58 +5,17 @@
  */
 package MVCExp;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-
 /**
  *
  * @author crmol
  */
-public class CamperView extends JFrame {
+public class CamperView {
 
-    public void CamperView() {
-
+    public void printCamperInfo(String firstName, String lastName, String phoneNum) {
+        System.out.println("Camper: ");
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("Phone Number: " + phoneNum);
     }
-
-    private JPanel contentPane;
-    public JTable jTableCamper;
-
-    //Launch Application
-    public static void main(String[] args) {
-        EventQueue.invokeLater(() -> {
-            try {
-                CamperView frame = new CamperView();
-                frame.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-    }
-
-    //Create frame
-    public CamperView() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 450, 300);
-        contentPane = new JPanel();
-        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        contentPane.setLayout(new BorderLayout(0, 0));
-        setContentPane(contentPane);
-
-        jTableCamper = new JTable();
-        jTableCamper.setModel(new DefaultTableModel(
-                new Object[][]{
-                    {null, null, null, null},
-    },
-    new String[]{
-        "First Name", "Last Name", "Phone Number", "City", "State"}
-));
-    
-    contentPane.add (jTableCamper, BorderLayout.CENTER);
-}
 
 }
