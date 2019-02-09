@@ -23,15 +23,15 @@ public class HandleCamperRequests {
 
         //simplified user menu
         System.out.println("Please enter your slection");
-        System.out.println("To see your current camper balance: B\n"
-                + "                 To make a payment: P\n"
-                + "          To charge to your acount: C\n"
-                + "                           To exit: Q");
+        System.out.println("B: To see your current camper balance \n"
+                         + "P: To make a payment                  \n"
+                         + "C: To charge to your acount           \n"
+                         + "Q: To exit");
 
         request = input.nextLine().toUpperCase();
   
        
-
+        //While user does not quit the user can see the balance, make a payment or charge to the account
         while (!"Q".equals(request)) {
 
             switch (request) {
@@ -64,7 +64,7 @@ public class HandleCamperRequests {
                     + "To make a payment: P\n"
                     + "To charge to your account: C\n"
                     + "To exit: Q");
-            request = input.nextLine();
+            request = input.nextLine().toUpperCase();
         }
 
         System.out.println("Thank you for staying at Java Campground");

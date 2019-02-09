@@ -19,6 +19,7 @@ public class CamperHandler {
 
     }
 
+        //handles user requests
     public double handleRequest(String request, double balance, double amount) {
 
         map.put("B", new HandleCamperBalance());
