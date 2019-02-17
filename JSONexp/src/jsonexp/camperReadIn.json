@@ -1,0 +1,13 @@
+{
+    "camperID": 2445,
+    "firstname": "Brennen",
+    "lastname": "Edwards",
+    "addressObject": {
+        "streetAddress": "1101 Wanless Ave",
+        "city": "Toronto",
+        "state": "ON",
+        "postalCode": "L7A 0A7",
+        "county": "CANADA"
+    },
+    "phonenumber": "509-555-5555"
+}

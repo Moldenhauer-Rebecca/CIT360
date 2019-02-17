@@ -1,0 +1,13 @@
+{
+    "camperID": 2345,
+    "firstname": "Belinda",
+    "lastname": "Howard",
+    "addressObject": {
+        "streetAddress": "1101 Birch Ave",
+        "city": "Richland",
+        "state": "WA",
+        "postalCode": "95342",
+        "county": "USA"
+    },
+    "phonenumber": "509-555-5555"
+}
