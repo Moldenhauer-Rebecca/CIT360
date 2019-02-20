@@ -25,9 +25,9 @@ public class JSONexp {
 
         Camper myCamper = createCamper();
 
-        //write to file camper.json - Serialiation
+        //write to file camper.json - Serialiation - second time ran file camperReadIn.json
         try {
-            mapper.writeValue(new File("camperReadIn.json"), myCamper);
+            mapper.writeValue(new File("camper.json"), myCamper);
 
         } catch (IOException e1) {
             e1.printStackTrace();
