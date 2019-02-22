@@ -1,5 +1,5 @@
 
-import org.junit.Test;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 /**
@@ -50,6 +50,7 @@ public class AssertTestExp {
         assertEquals(calcOne, numThree);
         assertTrue(calcOne < numFour);
         assertFalse(calcTwo < calcOne);
+        assertThat(numOne, is(numOne));
     }
 
 }

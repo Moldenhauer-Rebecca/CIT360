@@ -61,7 +61,7 @@ public class AssertTestExpTest {
         //check that a condition is true  
         assertTrue(numFour < calcTwo);
 
-        //check that a condition is false  - test should fail
+        //check that a condition is false  
         assertFalse(calcTwo < numThree);
 
         //assert that checks if a specific value matches an expected one. 
